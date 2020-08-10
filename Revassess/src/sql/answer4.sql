@@ -1,0 +1,1 @@
+SELECT au.username, c.name, f.question, f.answer FROM category c INNER JOIN flashcard f ON c.category_id = f.category_id INNER JOIN study_set_card ssc ON ssc.flashcard_id = f.flashcard_id INNER JOIN study_set ss ON ss.study_set_id = ssc.study_set_id INNER JOIN app_user au ON au.user_id  = ss.owner_id WHERE au.user_id =  '4';
